@@ -1,28 +1,12 @@
-'use strict';
+"use strict";
 
-var program = require('commander');
-
-// 定义版本和参数选项
-program.version('0.1.0', '-v, --version').option('-i, --init', 'init something').option('-g, --generate', 'generate something').option('-r, --remove', 'remove something');
-
-// 必须在.parse()之前，因为node的emit()是即时的
-program.on('--help', function () {
-    console.log('  Examples:');
-    console.log('');
-    console.log('    this is an example');
-    console.log('');
+Object.defineProperty(exports, "__esModule", {
+    value: true
 });
+// 主的流程控制
+let apply = (action, ...args) => {
+    //babel-env
+    require(`./${action}`)(...args);
+};
 
-program.parse(process.argv);
-
-if (program.init) {
-    console.log('init something');
-}
-
-if (program.generate) {
-    console.log('generate something');
-}
-
-if (program.remove) {
-    console.log('remove something');
-}
+exports.default = apply;
