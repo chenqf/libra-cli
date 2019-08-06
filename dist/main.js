@@ -19,6 +19,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // 修改控制台输出内容样式
 
 
+// 一个实际例子：https://github.com/YvetteLau/Blog/tree/master/eos-cli
+
+
 _commander2.default.command('init').description('generate a new project from a template').alias('i') //别名
 .action(() => {
     (0, _init2.default)(...process.argv.slice(3));

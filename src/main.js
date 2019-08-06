@@ -8,6 +8,9 @@ import initApply from './init';
 import chalk from 'chalk'; // 修改控制台输出内容样式
 
 
+// 一个实际例子：https://github.com/YvetteLau/Blog/tree/master/eos-cli
+
+
 program.command('init')
     .description('generate a new project from a template')
     .alias('i') //别名
